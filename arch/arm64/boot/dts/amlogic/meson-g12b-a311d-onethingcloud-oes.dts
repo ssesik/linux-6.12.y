@@ -291,6 +291,7 @@
 	phy-mode = "rgmii";
 	phy-handle = <&rtl8211f>;
 	amlogic,tx-delay-ns = <2>;
+	amlogic,rx-delay-ns = <2>;
 };
 
 &ext_mdio {
