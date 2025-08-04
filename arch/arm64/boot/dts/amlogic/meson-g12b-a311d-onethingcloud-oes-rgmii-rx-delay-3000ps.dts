@@ -14,7 +14,4 @@
 	phy-mode = "rgmii-rxid";
 	/* rtl8211f 2ns + MAC 1000ps */
 	rx-internal-delay-ps = <1000>;
-	/* keep MAC rx delay when in rgmii-rxid mode */
-	amlogic,keep-rx-internal-delay;
-	amlogic,invert-rxclk;
 };
