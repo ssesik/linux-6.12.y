@@ -307,7 +307,7 @@ static int meson8b_init_rgmii_delays(struct meson8b_dwmac *dwmac)
 		break;
 	case PHY_INTERFACE_MODE_RGMII_RXID:
 		delay_config = tx_dly_config;
-		if(!dwmac->keep_rx_delay)
+		if (!dwmac->keep_rx_delay)
 			cfg_rxclk_dly = 0;
 		break;
 	case PHY_INTERFACE_MODE_RGMII_TXID:
@@ -347,7 +347,7 @@ static int meson8b_init_rgmii_delays(struct meson8b_dwmac *dwmac)
 				PRG_ETH0_ADJ_DELAY | PRG_ETH0_ADJ_SKEW,
 				delay_config);
 
-	if(dwmac->invert_rxclk)
+	if (dwmac->invert_rxclk)
 		meson8b_dwmac_mask_bits(dwmac, PRG_ETH0,
 					PRG_ETH0_INVERT_RXCLK,
 					PRG_ETH0_INVERT_RXCLK);
